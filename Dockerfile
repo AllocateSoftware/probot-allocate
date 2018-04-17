@@ -1,8 +1,9 @@
-FROM node:9.11.1-alpine
+FROM node:9.11.1
 
-RUN apk add --update \
+RUN apt-get install -y \
     python \
-    make
+    make \
+    tzdata
 
 # set working directory
 RUN mkdir -p /usr/src/app
